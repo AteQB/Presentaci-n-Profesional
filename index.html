@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Johana Quintana Blas - QA Specialist & Generative AI Certified</title>
+    <title>Johana Quintana - QA Specialist & Generative AI Certified</title>
     <style>
         * {
             margin: 0;
@@ -12,672 +12,847 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.4;
-            color: #333;
-            background: #f0f0f0;
-            font-size: 14px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: linear-gradient(135deg, #1e3a5f 0%, #4ecdc4 100%);
+            overflow-x: hidden;
         }
 
-        .cv-container {
-            max-width: 210mm;
-            margin: 20px auto;
-            background: white;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            min-height: 297mm;
-        }
-
-        .header {
-            background: linear-gradient(45deg, #2c3e50, #3498db, #16a085);
-            color: white;
-            padding: 30px;
-            text-align: center;
-        }
-
-        .name {
-            font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-
-        .title {
-            font-size: 16px;
-            margin-bottom: 15px;
-            opacity: 0.9;
-        }
-
-        .summary {
-            font-size: 14px;
-            line-height: 1.5;
-            max-width: 600px;
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
+            position: relative;
+            background: #ffffff;
+            min-height: 100vh;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
         }
 
-        .main-content {
-            display: flex;
-            min-height: calc(297mm - 140px);
-        }
-
-        .sidebar {
-            width: 35%;
-            background: #f8f9fa;
-            padding: 25px 20px;
-        }
-
-        .content {
-            width: 65%;
-            padding: 25px 20px;
-        }
-
-        .section-title {
-            font-size: 18px;
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #16a085;
-            padding-bottom: 5px;
-        }
-
-        .sidebar .section-title {
-            font-size: 16px;
-            margin-bottom: 12px;
-        }
-
-        .contact-info {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            border-left: 4px solid #16a085;
-        }
-
-        .contact-item {
-            margin: 8px 0;
-            font-size: 13px;
-        }
-
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 8px;
-            margin-top: 10px;
-        }
-
-        .tech-item {
-            background: linear-gradient(45deg, #16a085, #3498db);
+        /* Header Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6b 50%, #4ecdc4 100%);
             color: white;
-            padding: 8px;
+            padding: 80px 40px;
             text-align: center;
-            border-radius: 6px;
-            font-size: 12px;
-            font-weight: 500;
+            position: relative;
+            overflow: hidden;
         }
 
-        .education-item, .cert-item {
-            background: white;
-            padding: 12px;
-            margin: 8px 0;
-            border-radius: 6px;
-            border-left: 3px solid #e74c3c;
-            font-size: 13px;
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            pointer-events: none;
         }
 
-        .stats {
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #4ecdc4, #ffffff, #5a7a95);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            opacity: 0.8;
+            line-height: 1.7;
+        }
+
+        .stats-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin: 20px 0;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
         }
 
         .stat-card {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             text-align: center;
-            border-left: 4px solid #3498db;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
 
         .stat-number {
-            font-size: 24px;
-            font-weight: bold;
-            color: #3498db;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #4ecdc4;
+            margin-bottom: 10px;
         }
 
         .stat-label {
-            color: #666;
-            font-size: 12px;
+            font-size: 1rem;
+            opacity: 0.9;
         }
 
-        .highlight {
-            background: linear-gradient(120deg, rgba(22,160,133,0.1), rgba(52,152,219,0.1));
-            padding: 15px;
-            border-radius: 8px;
-            margin: 15px 0;
-            border-left: 4px solid #16a085;
-        }
-
-        .highlight h4 {
-            color: #2c3e50;
-            margin-bottom: 8px;
-            font-size: 16px;
-        }
-
-        .highlight p {
-            margin: 5px 0;
-            font-size: 13px;
-        }
-
-        .experience-item {
-            background: #f8f9fa;
-            padding: 18px;
-            margin-bottom: 18px;
-            border-radius: 8px;
-            border-left: 4px solid #3498db;
-        }
-
-        .job-header {
+        /* Navigation */
+        .nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 20px 40px;
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 12px;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        .job-title {
-            font-size: 16px;
-            font-weight: bold;
-            color: #2c3e50;
+        .nav-item {
+            padding: 12px 24px;
+            background: linear-gradient(45deg, #1e3a5f, #4ecdc4);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(30, 58, 95, 0.3);
         }
 
-        .company {
-            font-size: 14px;
-            color: #3498db;
-            font-weight: 500;
+        .nav-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(78, 205, 196, 0.4);
         }
 
-        .duration {
-            color: #666;
-            font-size: 12px;
-            background: #e9ecef;
-            padding: 4px 8px;
-            border-radius: 12px;
-        }
-
-        .achievements {
-            list-style: none;
-            padding: 0;
-        }
-
-        .achievements li {
-            padding: 4px 0;
-            padding-left: 15px;
+        /* Sections */
+        .section {
+            padding: 80px 40px;
             position: relative;
-            font-size: 13px;
         }
 
-        .achievements li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: #3498db;
-            font-weight: bold;
+        .section:nth-child(even) {
+            background: #f8fafc;
         }
 
-        .skill-category {
-            margin-bottom: 20px;
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            background: linear-gradient(45deg, #1e3a5f, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .skill-category h4 {
-            color: #2c3e50;
-            font-size: 14px;
-            margin-bottom: 8px;
-        }
-
-        .skill-item {
-            background: white;
-            padding: 8px 12px;
-            margin: 4px 0;
-            border-radius: 15px;
-            border-left: 3px solid #16a085;
-            font-size: 12px;
-        }
-
-        .project-section {
-            border-left: 5px solid #16a085;
-            background: linear-gradient(135deg, rgba(22,160,133,0.1) 0%, rgba(52,152,219,0.1) 100%);
-            margin-bottom: 20px;
-        }
-
-        .podcast-section {
-            border-left: 5px solid #e91e63;
-            background: linear-gradient(135deg, rgba(233,30,99,0.1) 0%, rgba(255,193,7,0.1) 100%);
-        }
-
+        /* Services Grid */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 12px;
-            margin: 15px 0;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
         }
 
         .service-card {
             background: white;
-            padding: 12px;
-            border-radius: 6px;
-            border-left: 3px solid #3498db;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-        .service-card h5 {
-            color: #2c3e50;
-            margin-bottom: 6px;
-            font-size: 13px;
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3a5f, #4ecdc4);
         }
 
-        .service-card ul {
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card.training {
+            border-left-color: #4ecdc4;
+        }
+
+        .service-card.consulting {
+            border-left-color: #1e3a5f;
+        }
+
+        .service-card.podcast {
+            border-left-color: #5a7a95;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1a202c;
+        }
+
+        .service-description {
+            color: #4a5568;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .service-features {
             list-style: none;
             padding: 0;
         }
 
-        .service-card li {
-            padding: 2px 0;
-            font-size: 11px;
+        .service-features li {
+            padding: 8px 0;
+            color: #2d3748;
+            position: relative;
+            padding-left: 25px;
         }
 
-        .philosophy-box {
-            background: #4a148c;
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4ecdc4;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .skill-category-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1a202c;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: linear-gradient(45deg, #1e3a5f, #4ecdc4);
             color: white;
-            padding: 12px;
-            border-radius: 6px;
-            text-align: center;
-            margin: 10px 0;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: transform 0.2s ease;
         }
 
-        .philosophy-box h4 {
-            color: #ffc107;
-            margin-bottom: 5px;
+        .skill-tag:hover {
+            transform: scale(1.05);
         }
 
-        .contact-footer {
-            background: #2c3e50;
-            color: white;
-            padding: 8px;
-            border-radius: 6px;
-            text-align: center;
-            margin-top: 10px;
-            font-size: 12px;
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
-        .download-btn {
-            position: fixed;
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, #1e3a5f, #4ecdc4);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+            width: 50%;
+            padding: 0 40px;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
             top: 20px;
-            right: 20px;
-            background: #16a085;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 14px;
-            box-shadow: 0 4px 12px rgba(22, 160, 133, 0.3);
-            z-index: 1000;
+            width: 20px;
+            height: 20px;
+            background: #4ecdc4;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px #4ecdc4;
         }
 
-        .download-btn:hover {
-            background: #148f77;
+        .timeline-item:nth-child(odd)::before {
+            right: -10px;
         }
 
-        @media print {
-            body { 
-                background: white; 
-                font-size: 12px;
-            }
-            .cv-container { 
-                margin: 0; 
-                box-shadow: none; 
-                max-width: none;
-            }
-            .download-btn { 
-                display: none; 
-            }
-            .main-content {
-                min-height: auto;
-            }
-            .experience-item {
-                break-inside: avoid;
-                margin-bottom: 12px;
-            }
-            .project-section {
-                break-inside: avoid;
-            }
+        .timeline-item:nth-child(even)::before {
+            left: -10px;
         }
 
+        .timeline-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #1e3a5f;
+        }
+
+        .timeline-date {
+            color: #4ecdc4;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #1a202c;
+        }
+
+        .timeline-company {
+            color: #4a5568;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .timeline-description {
+            color: #2d3748;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #1e3a5f;
+        }
+
+        .contact-label {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #1a202c;
+        }
+
+        .contact-value {
+            color: #4a5568;
+            word-break: break-all;
+        }
+
+        /* Floating Elements */
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(45deg, rgba(30, 58, 95, 0.1), rgba(78, 205, 196, 0.1));
+            pointer-events: none;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-shape:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            width: 60px;
+            height: 60px;
+            animation-delay: 0s;
+        }
+
+        .floating-shape:nth-child(2) {
+            top: 20%;
+            right: 10%;
+            width: 80px;
+            height: 80px;
+            animation-delay: 2s;
+        }
+
+        .floating-shape:nth-child(3) {
+            bottom: 20%;
+            left: 15%;
+            width: 40px;
+            height: 40px;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .cv-container {
-                margin: 10px;
-                max-width: none;
+            .hero {
+                padding: 60px 20px;
             }
-            .main-content {
-                flex-direction: column;
+            
+            .hero h1 {
+                font-size: 2.5rem;
             }
-            .sidebar, .content {
+            
+            .section {
+                padding: 60px 20px;
+            }
+            
+            .nav {
+                padding: 15px 20px;
+                gap: 15px;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
                 width: 100%;
+                left: 0;
+                padding-left: 50px;
             }
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
+            
+            .timeline-item::before {
+                left: 10px !important;
             }
-            .services-grid {
+            
+            .services-grid,
+            .skills-grid {
                 grid-template-columns: 1fr;
             }
-            .job-header {
-                flex-direction: column;
-                gap: 8px;
-            }
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
 <body>
-    <div class="cv-container">
-        <header class="header">
-            <h1 class="name">Johana Atenas Quintana Blas</h1>
-            <div class="title">QA Specialist | Generative AI Certified | Agile Leader | Entrepreneur</div>
-            <p class="summary">
-                Especialista en calidad de software con experiencia sólida en el sector financiero y asegurador. 
-                Emprendedora social enfocada en desarrollar nuevos talentos QA. A partir de enero 2025, impulsa 
-                AI Testing Training & Services y el Podcast QA-blando, democratizando el conocimiento en calidad 
-                de software con estándares internacionales.
-            </p>
-        </header>
+    <div class="container">
+        <!-- Floating Decorative Elements -->
+        <div class="floating-shape"></div>
+        <div class="floating-shape"></div>
+        <div class="floating-shape"></div>
 
-        <div class="main-content">
-            <aside class="sidebar">
-                <div class="contact-info">
-                    <h3 style="color: #2c3e50; margin-bottom: 10px; font-size: 16px;">Contacto</h3>
-                    <div class="contact-item">
-                        📧 quintanablasjohanaatenas@gmail.com
-                    </div>
-                    <div class="contact-item">
-                        📱 +51 980 565 944
-                    </div>
-                    <div class="contact-item">
-                        📍 Lima, Perú
-                    </div>
-                </div>
-
-                <div class="section">
-                    <h3 class="section-title">Tecnologías</h3>
-                    <div class="tech-grid">
-                        <div class="tech-item">Python</div>
-                        <div class="tech-item">Java</div>
-                        <div class="tech-item">COBOL</div>
-                        <div class="tech-item">Selenium</div>
-                        <div class="tech-item">SQL</div>
-                        <div class="tech-item">DB2</div>
-                        <div class="tech-item">Oracle</div>
-                        <div class="tech-item">Jira</div>
-                        <div class="tech-item">Jenkins</div>
-                        <div class="tech-item">MongoDB</div>
-                        <div class="tech-item">Postman</div>
-                        <div class="tech-item">SonarCloud</div>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <h3 class="section-title">Educación</h3>
-                    <div class="education-item">
-                        <strong>Especialización en IA</strong><br>
-                        <small>USIL (2024-2025)</small>
-                    </div>
-                    <div class="education-item">
-                        <strong>Bachiller en Ingeniería</strong><br>
-                        <small>UPCI (2007-2012)</small>
-                    </div>
-                    <div class="education-item">
-                        <strong>Administrador de Redes</strong><br>
-                        <small>TECSUP (2012)</small>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <h3 class="section-title">Certificaciones</h3>
-                    <div class="cert-item">GAIPC™ - Generative AI Professional</div>
-                    <div class="cert-item">CPEFPC™ - Prompt Engineering</div>
-                    <div class="cert-item">ISTQB CTFL 4.0</div>
-                    <div class="cert-item">Scrum Master SMPC®</div>
-                    <div class="cert-item">AWS IA Generativa</div>
-                </div>
-            </aside>
-
-            <main class="content">
-                <div class="stats">
-                    <div class="stat-card">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Johana Atenas Quintana Blas</h1>
+                <div class="hero-subtitle">QA Specialist | Generative AI Certified | Agile Leader | Entrepreneur</div>
+                <p class="hero-description">
+                    Especialista en calidad de software con 9+ años de experiencia en sectores financiero y asegurador. 
+                    Emprendedora social enfocada en desarrollar nuevos talentos QA y democratizar el conocimiento 
+                    en calidad de software con estándares internacionales.
+                </p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card fade-in">
                         <div class="stat-number">9+</div>
-                        <div class="stat-label">Años Experiencia</div>
+                        <div class="stat-label">Años de Experiencia</div>
                     </div>
-                    <div class="stat-card">
+                    <div class="stat-card fade-in">
                         <div class="stat-number">30%</div>
                         <div class="stat-label">Mejora en Eficiencia</div>
                     </div>
-                    <div class="stat-card">
+                    <div class="stat-card fade-in">
                         <div class="stat-number">2</div>
-                        <div class="stat-label">Emprendimientos</div>
+                        <div class="stat-label">Emprendimientos Activos</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <a href="#services" class="nav-item">🚀 Servicios</a>
+            <a href="#skills" class="nav-item">💡 Habilidades</a>
+            <a href="#experience" class="nav-item">📈 Experiencia</a>
+            <a href="#contact" class="nav-item">📞 Contacto</a>
+        </nav>
+
+        <!-- Services Section -->
+        <section id="services" class="section">
+            <h2 class="section-title">Servicios Profesionales</h2>
+            
+                            <div class="services-grid">
+                <div class="service-card training fade-in">
+                    <div class="service-logo-container">
+                        <svg width="80" height="60" viewBox="0 0 400 300" style="margin-bottom: 20px;">
+                            <!-- AI Testing Logo Recreation -->
+                            <defs>
+                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#4ecdc4;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Main square -->
+                            <rect x="50" y="50" width="120" height="120" rx="15" fill="#1e3a5f"/>
+                            <!-- Inner squares -->
+                            <rect x="80" y="80" width="80" height="80" rx="10" fill="#5a7a95"/>
+                            <rect x="100" y="100" width="60" height="60" rx="8" fill="#4ecdc4"/>
+                            <!-- White frame -->
+                            <rect x="70" y="70" width="100" height="100" rx="12" fill="none" stroke="white" stroke-width="6"/>
+                            <!-- Side elements -->
+                            <rect x="180" y="60" width="40" height="40" rx="8" fill="#6b7280"/>
+                            <rect x="190" y="130" width="50" height="50" rx="10" fill="#4ecdc4"/>
+                            <!-- Text -->
+                            <text x="50" y="220" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1e3a5f">AI TESTING</text>
+                            <text x="50" y="245" font-family="Arial, sans-serif" font-size="16" fill="#5a7a95">TRAINING & SERVICES</text>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">AI Testing Training & Services</h3>
+                    <p class="service-description">
+                        Transformamos profesionales IT en Quality Engineers certificados internacionalmente
+                    </p>
+                    <ul class="service-features">
+                        <li>Capacitación basada en ISTQB</li>
+                        <li>Testing Manual y Automatizado</li>
+                        <li>Mentoría personalizada</li>
+                        <li>Fundamentos del Analista de Calidad</li>
+                    </ul>
+                </div>
+
+                <div class="service-card consulting fade-in">
+                    <span class="service-icon">⚙️</span>
+                    <h3 class="service-title">Consultoría en Calidad</h3>
+                    <p class="service-description">
+                        Servicios especializados de aseguramiento de calidad para empresas
+                    </p>
+                    <ul class="service-features">
+                        <li>Testing web y móvil</li>
+                        <li>Automatización de pruebas</li>
+                        <li>Auditorías de calidad</li>
+                        <li>Testing de APIs</li>
+                        <li>Implementación de IA Generativa en Testing</li>
+                    </ul>
+                </div>
+
+                <div class="service-card podcast fade-in">
+                    <div class="service-logo-container">
+                        <svg width="80" height="80" viewBox="0 0 200 200" style="margin-bottom: 15px;">
+                            <!-- QA-blando Logo Recreation -->
+                            <!-- Headphones -->
+                            <path d="M100 30 C70 30, 45 55, 45 85 L45 105 C45 110, 50 115, 55 115 L65 115 C70 115, 75 110, 75 105 L75 95 C75 90, 70 85, 65 85 L60 85 L60 85 C60 60, 77 40, 100 40 C123 40, 140 60, 140 85 L135 85 C130 85, 125 90, 125 95 L125 105 C125 110, 130 115, 135 115 L145 115 C150 115, 155 110, 155 105 L155 85 C155 55, 130 30, 100 30 Z" fill="#2d1b69"/>
+                            <!-- Microphone -->
+                            <ellipse cx="100" cy="90" rx="15" ry="25" fill="#f39c12"/>
+                            <rect x="95" y="115" width="10" height="20" fill="#e67e22"/>
+                            <rect x="90" y="135" width="20" height="8" rx="4" fill="#2d1b69"/>
+                            <!-- Sound waves -->
+                            <path d="M70 70 L75 65 M70 80 L75 75 M70 90 L75 85" stroke="#f39c12" stroke-width="3" stroke-linecap="round"/>
+                            <!-- Play button -->
+                            <circle cx="160" cy="70" r="12" fill="#f39c12"/>
+                            <path d="M156 65 L156 75 L164 70 Z" fill="white"/>
+                            <!-- Text background -->
+                            <rect x="20" y="150" width="160" height="35" rx="17" fill="#2d1b69"/>
+                            <!-- Text -->
+                            <text x="100" y="168" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">PODCAST</text>
+                            <text x="100" y="182" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#f39c12" text-anchor="middle">QA-BLANDO</text>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Podcast QA-blando</h3>
+                    <p class="service-description">
+                        "Serios pero no tan serios" - Democratizando el conocimiento QA
+                    </p>
+                    <ul class="service-features">
+                        <li>Tips prácticos de QA</li>
+                        <li>Entrevistas a expertos</li>
+                        <li>Casos de estudio reales</li>
+                        <li>Tendencias en testing</li>
+                        <li>Comunidad QA en español</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2 class="section-title">Competencias Técnicas</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category fade-in">
+                    <h3 class="skill-category-title">
+                        🔍 Aseguramiento de Calidad
+                    </h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">ISTQB CTFL 4.0</span>
+                        <span class="skill-tag">Testing Manual</span>
+                        <span class="skill-tag">Testing Automatizado</span>
+                        <span class="skill-tag">Selenium</span>
+                        <span class="skill-tag">Estrategias de Prueba</span>
+                        <span class="skill-tag">CMMI3/CMMI5</span>
                     </div>
                 </div>
 
-                <div class="highlight">
-                    <h4>🚀 Especialidades Clave & Nuevos Proyectos 2025</h4>
-                    <p><strong>IA Generativa:</strong> Desarrollo de soluciones para detección de anomalías y automatización</p>
-                    <p><strong>Liderazgo Ágil:</strong> Coordinación de equipos multidisciplinarios</p>
-                    <p><strong>Emprendimiento en Desarrollo:</strong> Nuevos talentos QA y democratización del conocimiento</p>
-                </div>
-
-                <div class="section">
-                    <h2 class="section-title">🌟 Nuevas Iniciativas 2025</h2>
-                    
-                    <div class="experience-item project-section">
-                        <div class="job-header">
-                            <div>
-                                <div class="job-title">🏢 AI Testing Training & Services</div>
-                                <div class="company" style="color: #16a085;">Fundadora & Consultora Principal</div>
-                            </div>
-                            <div class="duration">Ene 2025 - Presente</div>
-                        </div>
-                        
-                        <div style="background: white; padding: 10px; border-radius: 6px; margin: 10px 0; text-align: center; border-left: 3px solid #16a085;">
-                            <em style="color: #2c3e50; font-size: 14px;">"Transformamos profesionales IT en Quality Engineers certificados internacionalmente"</em>
-                        </div>
-                        
-                        <div class="services-grid">
-                            <div class="service-card">
-                                <h5>📚 CAPACITACIÓN & CERTIFICACIÓN</h5>
-                                <ul>
-                                    <li>✅ Fundamentos del Analista de Calidad</li>
-                                    <li>✅ Capacitación basada en ISTQB</li>
-                                    <li>✅ Testing Manual y Automatizado</li>
-                                    <li>✅ Mentoría personalizada</li>
-                                </ul>
-                            </div>
-                            <div class="service-card">
-                                <h5>⚙️ SERVICIOS DE CALIDAD</h5>
-                                <ul>
-                                    <li>✅ Testing web y móvil</li>
-                                    <li>✅ Automatización de pruebas</li>
-                                    <li>✅ Auditorías de calidad</li>
-                                    <li>✅ Testing de APIs</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="experience-item podcast-section">
-                        <div class="job-header">
-                            <div>
-                                <div class="job-title">🎙️ Podcast QA-blando</div>
-                                <div class="company" style="color: #e91e63;">Host & Creadora de Contenido</div>
-                            </div>
-                            <div class="duration">Ene 2025 - Presente</div>
-                        </div>
-                        
-                        <div class="philosophy-box">
-                            <h4>"Serios pero no tan serios"</h4>
-                            <p style="margin: 0; font-size: 12px;">Democratizando el conocimiento en calidad de software para la comunidad hispanohablante</p>
-                        </div>
-                        
-                        <div class="services-grid">
-                            <div class="service-card" style="border-left-color: #e91e63;">
-                                <h5>🎤 Contenido Educativo</h5>
-                                <ul>
-                                    <li>📻 Tips prácticos de QA</li>
-                                    <li>📻 Entrevistas a expertos</li>
-                                    <li>📻 Casos de estudio reales</li>
-                                    <li>📻 Tendencias en testing</li>
-                                </ul>
-                            </div>
-                            <div class="service-card" style="border-left-color: #ffc107;">
-                                <h5>🌟 Impacto Social</h5>
-                                <ul>
-                                    <li>🌍 Acceso gratuito al conocimiento</li>
-                                    <li>🌍 Comunidad QA en español</li>
-                                    <li>🌍 Mentoría a nuevos talentos</li>
-                                    <li>🌍 Networking profesional</li>
-                                </ul>
-                            </div>
-                        </div>
+                <div class="skill-category fade-in">
+                    <h3 class="skill-category-title">
+                        🤖 IA Generativa & Automatización
+                    </h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">GAIPCâ„¢ Certified</span>
+                        <span class="skill-tag">Prompt Engineering</span>
+                        <span class="skill-tag">IA Generativa en Testing</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">COBOL</span>
+                        <span class="skill-tag">AWS IA Generativa</span>
                     </div>
                 </div>
 
-                <div class="section">
-                    <h2 class="section-title">Competencias Principales</h2>
-                    
-                    <div class="skill-category">
-                        <h4>🔍 Aseguramiento y Control de Calidad</h4>
-                        <div class="skill-item">Análisis y estrategias de prueba personalizadas</div>
-                        <div class="skill-item">Supervisión de ciclos completos de testing</div>
-                        <div class="skill-item">Optimización de procesos y reducción de tiempos</div>
-                        <div class="skill-item">Evaluación CMMI3 y estándares de calidad</div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h4>🤖 IA Generativa & Automatización</h4>
-                        <div class="skill-item">Soluciones basadas en IA para detección de anomalías</div>
-                        <div class="skill-item">Automatización de pruebas con técnicas de IA</div>
-                        <div class="skill-item">Desarrollo en Python, Java, COBOL y Selenium</div>
-                        <div class="skill-item">Gestión de BD: SQL, DB2, Oracle</div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h4>👥 Liderazgo & Gestión</h4>
-                        <div class="skill-item">Coordinación de equipos multidisciplinarios</div>
-                        <div class="skill-item">Capacitación en metodologías ágiles</div>
-                        <div class="skill-item">Gestión de recursos y presupuestos</div>
-                        <div class="skill-item">Herramientas: Jira, Xray, Jenkins, Bitbucket</div>
+                <div class="skill-category fade-in">
+                    <h3 class="skill-category-title">
+                        🗄️ Bases de Datos
+                    </h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">DB2</span>
+                        <span class="skill-tag">Oracle</span>
+                        <span class="skill-tag">MongoDB</span>
                     </div>
                 </div>
 
-                <div class="section">
-                    <h2 class="section-title">Experiencia Profesional Destacada</h2>
-
-                    <div class="experience-item">
-                        <div class="job-header">
-                            <div>
-                                <div class="job-title">Analista Senior de Aseguramiento y Control de Calidad</div>
-                                <div class="company">La Positiva Seguros</div>
-                            </div>
-                            <div class="duration">Oct 2022 - Presente</div>
-                        </div>
-                        <ul class="achievements">
-                            <li><strong>Liderazgo:</strong> Coordinación de equipos de calidad y supervisión de Automatización</li>
-                            <li><strong>Optimización:</strong> Reducción del 20% en costos operativos</li>
-                            <li><strong>IA Implementada:</strong> Aumento del 30% en velocidad de pruebas</li>
-                            <li><strong>Capacitación:</strong> Desarrollo profesional en IA, Jenkins y Selenium</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="job-header">
-                            <div>
-                                <div class="job-title">Analista Funcional QA Senior</div>
-                                <div class="company">Indra - Proyecto BBVA</div>
-                            </div>
-                            <div class="duration">Jul 2021 - Sep 2022</div>
-                        </div>
-                        <ul class="achievements">
-                            <li><strong>Core Transactional:</strong> Aseguramiento en transferencias interbancarias</li>
-                            <li><strong>Optimización:</strong> Reducción del 15% en tiempo de ejecución</li>
-                            <li><strong>Proyectos Clave:</strong> Participación en Vocalink y liderazgo en Proyecto CIRCULAR</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="job-header">
-                            <div>
-                                <div class="job-title">Analista Técnico Senior</div>
-                                <div class="company">Canvia - Proyectos NIUVIZ, CLARO, BBVA</div>
-                            </div>
-                            <div class="duration">Oct 2018 - May 2021</div>
-                        </div>
-                        <ul class="achievements">
-                            <li><strong>VISANET:</strong> Liderazgo en pruebas de omnicanalidad, innovación y CRM</li>
-                            <li><strong>Reducción de Incidentes:</strong> 20% menos incidentes en producción</li>
-                            <li><strong>Múltiples Proyectos:</strong> CLARO, BBVA con mejoras significativas</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="job-header">
-                            <div>
-                                <div class="job-title">Roles Previos - Analista Funcional & Developer</div>
-                                <div class="company">MDP Consulting, Globokas, Everis, TCS</div>
-                            </div>
-                            <div class="duration">2014 - 2018</div>
-                        </div>
-                        <ul class="achievements">
-                            <li><strong>Sectores:</strong> Bancario, Telecomunicaciones, Medios de Pago</li>
-                            <li><strong>Especialización:</strong> COBOL, SOA, Integración de Servicios</li>
-                            <li><strong>Metodologías:</strong> Ágil, Cascada, PAR</li>
-                            <li><strong>Estándares:</strong> CMMI3 y CMMI5, mejora continua</li>
-                        </ul>
+                <div class="skill-category fade-in">
+                    <h3 class="skill-category-title">
+                        🛠️ Herramientas & DevOps
+                    </h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Jira</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">SonarCloud</span>
+                        <span class="skill-tag">Xray</span>
+                        <span class="skill-tag">Bitbucket</span>
                     </div>
                 </div>
-                
-                <div class="contact-footer">
-                    <strong>📋 PROYECTOS Y CAPACITACIONES</strong><br>
-                    📧 E-mail: aitestingservicesperu@gmail.com<br>
-                    📞 Teléfono: +51 992 097 896
+
+                <div class="skill-category fade-in">
+                    <h3 class="skill-category-title">
+                        👥 Liderazgo & Gestión
+                    </h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Scrum Master</span>
+                        <span class="skill-tag">Metodologías Ágiles</span>
+                        <span class="skill-tag">Liderazgo de Equipos</span>
+                        <span class="skill-tag">Gestión de Proyectos</span>
+                        <span class="skill-tag">Capacitación</span>
+                    </div>
                 </div>
-            </main>
-        </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <h2 class="section-title">Experiencia Profesional</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Oct 2022 - Presente</div>
+                        <h3 class="timeline-title">Analista Senior de Aseguramiento y Control de Calidad</h3>
+                        <div class="timeline-company">La Positiva Seguros</div>
+                        <p class="timeline-description">
+                            Liderazgo de equipos de calidad, implementación de IA en testing, 
+                            reducción del 20% en costos operativos y aumento del 30% en velocidad de pruebas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Jul 2021 - Sep 2022</div>
+                        <h3 class="timeline-title">Analista Funcional QA Senior</h3>
+                        <div class="timeline-company">Indra - Proyecto BBVA</div>
+                        <p class="timeline-description">
+                            Aseguramiento en core transaccional, optimización de transferencias interbancarias, 
+                            reducción del 15% en tiempo de ejecución.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Oct 2018 - May 2021</div>
+                        <h3 class="timeline-title">Analista Técnico Senior</h3>
+                        <div class="timeline-company">Canvia - Proyectos NIUVIZ, CLARO, BBVA</div>
+                        <p class="timeline-description">
+                            Liderazgo en pruebas de omnicanalidad para VISANET, 
+                            reducción del 20% en incidentes de producción.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2014 - 2018</div>
+                        <h3 class="timeline-title">Analista Funcional & Developer</h3>
+                        <div class="timeline-company">MDP Consulting, Globokas, Everis, TCS</div>
+                        <p class="timeline-description">
+                            Especialización en sectores bancario, telecomunicaciones y medios de pago. 
+                            Experiencia en COBOL, SOA, metodologías ágiles y estándares CMMI.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2 class="section-title">¿Trabajamos Juntos?</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-item fade-in">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-label">Email Empresarial</div>
+                    <div class="contact-value">aitestingservicesperu@gmail.com</div>
+                </div>
+
+                <div class="contact-item fade-in">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-label">Teléfono Empresarial</div>
+                    <div class="contact-value">+51 992 097 896</div>
+                </div>
+
+                <div class="contact-item fade-in">
+                    <div class="contact-icon">💼</div>
+                    <div class="contact-label">LinkedIn</div>
+                    <div class="contact-value">johana-quintana-blas</div>
+                </div>
+
+                <div class="contact-item fade-in">
+                    <div class="contact-icon">🌐</div>
+                    <div class="contact-label">GitHub</div>
+                    <div class="contact-value">github.com/AteQB</div>
+                </div>
+
+                <div class="contact-item fade-in">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-label">Ubicación</div>
+                    <div class="contact-value">Lima, Perú</div>
+                </div>
+
+                <div class="contact-item fade-in">
+                    <div class="contact-icon">🎙️</div>
+                    <div class="contact-label">Podcast</div>
+                    <div class="contact-value">QA-blando</div>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <button class="download-btn" onclick="window.print()">
-        📄 Descargar PDF
-    </button>
-
     <script>
-        // Optimización para impresión
-        window.addEventListener('beforeprint', function() {
-            document.body.style.fontSize = '11px';
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
 
-        window.addEventListener('afterprint', function() {
-            document.body.style.fontSize = '14px';
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
         });
 
-        // Función para generar PDF
-        function generatePDF() {
-            // Ajustar estilos para PDF
-            const originalStyle = document.body.style.cssText;
-            document.body.style.cssText += 'font-size: 11px !important;';
-            
-            // Imprimir
-            window.print();
-            
-            // Restaurar estilos
-            setTimeout(() => {
-                document.body.style.cssText = originalStyle;
-            }, 1000);
-        }
-
-        // Optimizar botón
-        document.querySelector('.download-btn').onclick = generatePDF;
+        // Add some initial animations
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.stat-card').forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('visible');
+                }, index * 200);
+            });
+        });
     </script>
 </body>
 </html>
